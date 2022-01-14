@@ -1,13 +1,13 @@
-import * as dotenv from "dotenv";
+import * as dotenv from 'dotenv';
 
 dotenv.config();
 
 export default {
   port: process.env.PORT,
   mysql: {
-    host: process.env.db_host || "",
-    user: process.env.db_user || "",
-    password: process.env.db_password || "",
-    database: process.env.db_name || "",
+    host: process.env.DB_HOST || '',
+    user: process.env.DB_USER || '',
+    password: process.env.DB_PWD || '',
+    database: process.env.DB_NAME || '',
   },
 };
