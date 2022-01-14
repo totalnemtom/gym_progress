@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start": "db-migrate up && ts-node-dev ./src/index.ts",
     "lint": "eslint . --ext .ts"
   },
@@ -23,17 +23,25 @@
   },
   "homepage": "https://github.com/totalnemtom/gym_progress#readme",
   "devDependencies": {
+    "@types/babel__template": "^7.4.1",
     "@types/dotenv": "^8.2.0",
     "@types/eslint": "^8.2.2",
     "@types/express": "^4.17.13",
+    "@types/jest": "^27.4.0",
     "@types/node": "^17.0.8",
+    "@types/prettier": "^2.4.3",
+    "@types/winston": "^2.4.4",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
+    "babel-jest": "^27.4.6",
     "db-migrate": "^0.11.13",
     "eslint": "^8.6.0",
+    "jest": "^27.4.7",
     "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
     "ts-node": "^10.4.0",
-    "ts-node-dev": "^1.1.8"
+    "ts-node-dev": "^1.1.8",
+    "winston": "^3.3.0"
   },
   "dependencies": {
     "@types/mysql": "^2.15.20",
