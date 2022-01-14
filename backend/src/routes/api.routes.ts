@@ -1,5 +1,4 @@
 import express, { Response } from "express";
-import { isRegularExpressionLiteral } from "typescript";
 
 const router = express.Router();
 
