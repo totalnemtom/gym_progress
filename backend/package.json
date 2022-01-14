@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test",
+    "start": "ts-node-dev ./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totalnemtom/gym_progress.git"
+  },
+  "keywords": [
+    "gym",
+    "progress"
+  ],
+  "author": "Matyi Bálint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totalnemtom/gym_progress/issues"
+  },
+  "homepage": "https://github.com/totalnemtom/gym_progress#readme",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.8",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8"
+  },
+  "dependencies": {
+    "dotenv": "^11.0.0",
+    "express": "^4.17.2"
+  }
+}
