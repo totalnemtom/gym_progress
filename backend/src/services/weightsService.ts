@@ -1,5 +1,8 @@
 import { GetAllWeights, Weight } from '../models/weights';
 
-export const getAllWeights = async (): Promise<GetAllWeights> => ({
-  weights: await Weight.getAll(),
-});
+export const WeightService = {
+  async getAll(): Promise<GetAllWeights> {
+    let weights;
+    return (weights = { weights: await Weight.getAll() });
+  },
+};

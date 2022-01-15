@@ -1,5 +1,3 @@
-import { getAllWeights } from './weightsService';
+import { WeightService } from './weightsService';
 
-export const weightService = {
-  getAllWeights,
-};
+export const weightService = WeightService;
