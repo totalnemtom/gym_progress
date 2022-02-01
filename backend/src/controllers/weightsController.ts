@@ -1,7 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import HttpException from '../../exceptions/httpException';
 import { weightService } from '../services';
-import { WeightService } from '../services/weightsService';
 
 export const weightController = {
   async getAll(req: Request, res: Response, next: NextFunction): Promise<void> {

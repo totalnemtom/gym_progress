@@ -1,11 +1,13 @@
 import { WeightsController } from '../index';
 import { weightService } from '../../services/index';
 import httpMocks from 'node-mocks-http';
-import { getAllMockResponse } from './mocks/weight.mock';
-import { GetAllWeights } from '../../models/weights';
+import { getAllMockResponse, getByIdMockResponse } from './mocks/weight.mock';
+import { GetAllWeights, WeightParams } from '../../models/weights';
 
-const weightServiceMock = (weightService.getAll =
+const weightServiceGetAllMock = (weightService.getAll =
   jest.fn()) as jest.Mock<GetAllWeights>;
+const weightServiceGetById = (weightService.getById =
+  jest.fn()) as jest.Mock<WeightParams>;
 let req: any, res: any, next: any;
 
 beforeEach(() => {
@@ -18,7 +20,7 @@ describe('weightsController.getAll', () => {
     expect(typeof WeightsController.getAll).toBe('function');
   });
   it('should call weightService.getAll', async () => {
-    weightServiceMock.mockResolvedValue(getAllMockResponse as never);
+    weightServiceGetAllMock.mockResolvedValue(getAllMockResponse as never);
     await WeightsController.getAll(req, res, next);
     expect(weightService.getAll).toBeCalled();
   });
@@ -27,9 +29,28 @@ describe('weightsController.getAll', () => {
     expect(res.statusCode).toBe(200);
     expect(res._isEndCalled()).toBeTruthy();
   });
-  it('should return JSON', async () => {
-    weightServiceMock.mockResolvedValue(getAllMockResponse as never);
+  it('should return geAllMockResponse', async () => {
+    weightServiceGetAllMock.mockResolvedValue(getAllMockResponse as never);
     await WeightsController.getAll(req, res, next);
-    expect(res._isJSON()).toBeTruthy();
+    const data = res._getJSONData();
+    expect(data).toStrictEqual(getAllMockResponse);
+  });
+});
+describe('weightsController.getById', () => {
+  it('should call weightService.getById', async () => {
+    weightServiceGetById.mockResolvedValue(getByIdMockResponse as never);
+    await WeightsController.getById(req, res, next);
+    expect(weightService.getById).toBeCalled();
+  });
+  it('should return 200 response code', async () => {
+    await WeightsController.getById(req, res, next);
+    expect(res.statusCode).toBe(200);
+    expect(res._isEndCalled()).toBeTruthy();
+  });
+  it('should return geAllMockResponse', async () => {
+    weightServiceGetById.mockResolvedValue(getByIdMockResponse as never);
+    await WeightsController.getById(req, res, next);
+    const data = res._getJSONData();
+    expect(data).toStrictEqual(getByIdMockResponse);
   });
 });
