@@ -11,10 +11,12 @@ export const WeightService = {
     let weights: GetAllWeights;
     return (weights = { weights: await Weight.getAll() });
   },
+
   async getById({ weightId }: { weightId: number }): Promise<WeightParams> {
     let weight: WeightParams;
     return (weight = await Weight.getById({ weightId }));
   },
+
   async addWeight({
     weight,
     machineId,
@@ -25,6 +27,7 @@ export const WeightService = {
     let weightToAdd: WeightToAddResult;
     return (weightToAdd = await Weight.addWeight({ weight, machineId }));
   },
+
   async deleteWeight({
     weightId,
   }: {

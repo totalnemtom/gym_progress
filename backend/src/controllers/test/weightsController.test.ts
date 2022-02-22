@@ -58,7 +58,7 @@ describe('weightsController.getById', () => {
 });
 
 describe('weightsController.removeWeight', () => {
-  it('should call weightService.getById', async () => {
+  it('should call weightService.deleteWeight', async () => {
     weightServiceRemoveMock.mockResolvedValue(weightToDeleteMock as never);
     await WeightsController.removeWeight(req, res, next);
     expect(weightService.deleteWeight).toBeCalled();
@@ -68,7 +68,7 @@ describe('weightsController.removeWeight', () => {
     expect(res.statusCode).toBe(200);
     expect(res._isEndCalled()).toBeTruthy();
   });
-  it('should return getByIdMockResponse', async () => {
+  it('should return weightToDeleteMock', async () => {
     weightServiceRemoveMock.mockResolvedValue(weightToDeleteMock as never);
     await WeightsController.removeWeight(req, res, next);
     const data = res._getJSONData();

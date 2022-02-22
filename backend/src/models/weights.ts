@@ -35,6 +35,7 @@ export const Weight = {
     const result = (await db.query(query)) as WeightSQLResult;
     return result.results;
   },
+
   getById: async ({
     weightId,
   }: {
@@ -44,6 +45,7 @@ export const Weight = {
     const weight = (await db.query(query, [weightId])) as WeightSQLResult;
     return weight.results[0];
   },
+
   addWeight: async ({
     weight,
     machineId,
@@ -58,6 +60,7 @@ export const Weight = {
     ])) as WeightToAddResult;
     return weightToAdd;
   },
+
   removeWeight: async ({
     weightId,
   }: {
