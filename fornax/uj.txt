@@ -1,0 +1,48 @@
+#if byClip(p_parent.c_kapcsolat?.t_vhUgy?).length > 0
+       {
+          unitUrl: "${$kapcsolatokUrl}",
+          relation: "",
+          createMode : "append",
+          units: [
+            #for $elsodlegesKapcsolat,$k of $anyk.adozoTorzsadat.elsodlegesKapcsolat
+              {
+                unitUrl: "nav.elsodlegesKapcsolat.${$startElsodlegesKapcsolatNr}",
+                #set $startElsodlegesKapcsolatNr = $startElsodlegesKapcsolatNr + 1
+                relation: "c_elsodlegesKapcsolat~p_parent",       
+                createMode : "append",
+                properties : { 
+                  "nav::elsodlegesKapcsolat::adoalanyAzonosito": "asdsaf",
+                },
+                references: [
+                {relatedUnitUrl: "${$kapcsolatCimRelationUrl}", relation: "t_cim~t_cimKapcsolat"},
+                {relatedUnitUrl: "${up(unitUrl)}", relation: "t_adoalany~t_cimKapcsolat"},
+                ],
+              }
+            #end
+          ]
+        },
+    #endIf
+
+
+workOrders: [
+   #if ($anyk.adozoTorzsadat.elsodlegesKapcsolat?.length?) > 0 && byClip(p_parent.c_adoalany?.t_vhUgyKapcsolat?).length > 0
+      #for $esodlegesKapcs of $anyk.adozoTorzsadat.elsodlegesKapcsolat
+        {
+          workCode:     "nav::adoalany",
+          workOrderUrl: "${'nav.adoalany.'++$esodlegesKapcs.adozo.adoalanyAzonosito?}",
+          unitUrl:      "${'nav.adoalany.'++$esodlegesKapcs.adozo.adoalanyAzonosito?}",
+          properties:   { "nav::adoalany::azonosito": "${$esodlegesKapcs.adozo.adoalanyAzonosito?}" }
+        },
+      #end
+    #endIf
+    #if ($anyk.adozoTorzsadat.masodlagosKapcsolat?.length?) > 0 && byClip(p_parent.c_adoalany?.t_vhUgyKapcsolat?).length > 0
+      #for $masodlagosKapcs of $anyk.adozoTorzsadat.elsodlegesKapcsolat
+        {
+          workCode:     "nav::adoalany",
+          workOrderUrl: "nav.adoalany.${$masodlagosKapcs.adozo.adoalanyAzonosito?}",
+          unitUrl:      "nav.adoalany.${$masodlagosKapcs.adozo.adoalanyAzonosito?}",
+          properties:   { "nav::adoalany::azonosito": "${$masodlagosKapcs.adozo.adoalanyAzonosito?}" }
+        },
+      #end
+    #endIf
+  ]

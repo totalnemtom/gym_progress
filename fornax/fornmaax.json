@@ -1,0 +1,144 @@
+
+
+      {
+        "@schemaLocation": "http://soa.pillerkft.hu/services/2.1/adoalanykezeles/local http://soa.pillerkft.hu/services/2.1/adoalanykezeles.xsd",
+        "adozoTorzsadat": {
+           "nyilvantartasiSzam": "1109020011",
+           "partnerAzonosito": "2712850675",
+           "partnerIlletekessegiKod": "12",
+           "partnerNev": "CSOKICUKOR Kereskedelmi és Szolgáltató Korlátolt Felelősségű Társaság",
+           "partnerTipusKod": "SB",
+           "adozo": {
+              "adoalanyAzonosito": "18039472"
+           },
+           "cimKapcsolat": [{
+              "cim": {
+                 "hazszam": "28",
+                 "iranyitoszam": "2840",
+                 "kozteruletJelleg": "UTCA",
+                 "kozteruletMegnevezes": "SALLAI IMRE",
+                 "orszagkod": "HU",
+                 "telepules": "OROSZLÁNY",
+                 "cimOsztaly": "HEL",
+                 "cimTipus": "SZEKHELY"
+              },
+              "ervenysseg": {
+                 "ervenyessegKezdete": "2012-01-02"
+              }
+           }],
+           "konyvelesiAzonosito": "18039472",
+           "partnerAltipusKod": "SBC",
+           "utolsoPartnerModositasIdopont": "2021-10-05T09:30:47",
+           "adozasiJellemzoAdat": {
+              "afaJogcimKod": "1",
+              "afaKod": "2",
+              "afakorVektor": "1",
+              "bevalloiTipusKod": "E",
+              "gazdalkodasiFormaKod": "113",
+              "tarsasagiAdoalanyisagKod": "2",
+              "kulfoldiTelephellyelRendelkezes": "NEM",
+              "kulfoldiAdoalany": "NEM",
+              "nettoFinanszirozas": "NEM",
+              "partnerAllapot": {
+                 "partnerAllapotKod": "1",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2012-01-02"
+                 }
+              }
+           },
+           "tevekenysegAdat": {
+              "fotevekenysegKod": "4617",
+              "tevekenysegTipusKod": "FS3",
+              "ervenyesseg": {
+                 "ervenyessegKezdete": "2012-01-02"
+              }
+           },
+           "elsodlegesKapcsolat": [
+              {
+                 "nyilvantartasiSzam": "1206002229",
+                 "partnerAzonosito": "832043600",
+                 "partnerIlletekessegiKod": "12",
+                 "partnerNev": "SÁNDOR SZOLGÁLTATÓ ÉS KERESKEDELMI BETÉTI TÁRSASÁG",
+                 "partnerTipusKod": "SB",
+                 "adozo": {
+                    "adoalanyAzonosito": "24039062"
+                 },
+                 "letrehozasDatuma": "1994-04-01",
+                 "partnerAllapotKod": "1",
+                 "kapcsolatTipusNev": "Székhelyszolgáltató",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2015-01-02"
+                 },
+                 "kapcsolatTipusKod": "SZEKHELYSZOLGALTATO"
+              },
+              {
+                 "partnerAzonosito": "136392956",
+                 "partnerIlletekessegiKod": "03",
+                 "partnerNev": "BÓNA JÓZSEFNÉ",
+                 "partnerTipusKod": "MB",
+                 "adozo": {
+                    "adoalanyAzonosito": "8313444568"
+                 },
+                 "letrehozasDatuma": "1996-10-01",
+                 "partnerAllapotKod": "1",
+                 "kapcsolatMinosegMegnevezes": "Cégbíróságon bejelentett",
+                 "kapcsolatTipusNev": "Képviselő",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2011-03-17"
+                 },
+                 "kapcsolatTipusKod": "KEPVISELO"
+              },
+              {
+                 "partnerAzonosito": "316329143",
+                 "partnerIlletekessegiKod": "19",
+                 "partnerNev": "PILLER ZSOLT",
+                 "partnerTipusKod": "MB",
+                 "adozo": {
+                    "adoalanyAzonosito": "8401522757"
+                 },
+                 "letrehozasDatuma": "2003-06-20",
+                 "partnerAllapotKod": "1",
+                 "kapcsolatMinosegMegnevezes": "Cégbíróságon bejelentett",
+                 "kapcsolatTipusNev": "Képviselő",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2011-03-17"
+                 },
+                 "kapcsolatTipusKod": "KEPVISELO"
+              },
+              {
+                 "partnerAzonosito": "347446864",
+                 "partnerIlletekessegiKod": "42",
+                 "partnerNev": "MAGYAR ANDRÁS",
+                 "partnerTipusKod": "MB",
+                 "adozo": {
+                    "adoalanyAzonosito": "8353333783"
+                 },
+                 "letrehozasDatuma": "1996-10-01",
+                 "partnerAllapotKod": "1",
+                 "kapcsolatMinosegMegnevezes": "Cégbíróságon bejelentett",
+                 "kapcsolatTipusNev": "Képviselő",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2011-03-17"
+                 },
+                 "kapcsolatTipusKod": "KEPVISELO"
+              },
+              {
+                 "partnerAzonosito": "187754297",
+                 "partnerIlletekessegiKod": "07",
+                 "partnerNev": "DR. NÉMETH KÁLMÁN",
+                 "partnerTipusKod": "MB",
+                 "adozo": {
+                    "adoalanyAzonosito": "8348362304"
+                 },
+                 "letrehozasDatuma": "1997-04-22",
+                 "partnerAllapotKod": "1",
+                 "kapcsolatMinosegMegnevezes": "Cégbíróságon bejelentett",
+                 "kapcsolatTipusNev": "Képviselő",
+                 "ervenyesseg": {
+                    "ervenyessegKezdete": "2011-03-17"
+                 },
+                 "kapcsolatTipusKod": "KEPVISELO"
+              }
+           ]
+        }
+     }
